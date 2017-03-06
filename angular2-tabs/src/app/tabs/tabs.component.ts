@@ -3,13 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-tabs',
   template: `
-    <div>
-      <ul>
-        <li *ngFor="let tab of tabs" class="tabs" id={{tabs.indexOf(tab)}} (click)="changeTab($event)">
+    <div class = 'app'>
+      <ul class = "tabs">
+        <li *ngFor="let tab of tabs" class="tab clickable" id={{tabs.indexOf(tab)}} (click)="changeTab($event)">
           {{tab.name}}
         </li>
       </ul>
-      <div>
+      <div class = 'content'>
         <p>
         {{tabs[selected].content}}
         </p>
@@ -18,9 +18,46 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: [
     `
-    .tabs{
+    .tab{
       list-style: none;
+      border-left: 1px solid black;
+      border-top: 1px solid black;
+      border-radius 7px 7px 0px 0px;
+      width: 65px;
     }
+
+    .tab:nth-child(3){
+      border-right: 1px solid black;
+    }
+
+
+    .content{
+      text-align:center;
+      border: 1px solid black;
+      height: 192px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tabs{
+      display:flex;
+      justify-content: space-between;
+      padding: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+    }
+
+    .clickable{
+      cursor: pointer;
+    }
+
+    .app{
+      width:200px;
+    }
+
+
     `
   ]
 })
