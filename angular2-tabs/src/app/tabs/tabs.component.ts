@@ -5,7 +5,8 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div class = 'app'>
       <ul class = "tabs">
-        <li *ngFor="let tab of tabs" class="tab clickable" id={{tabs.indexOf(tab)}} (click)="changeTab($event)">
+        <li *ngFor="let tab of tabs" [ngClass] = "{'tab': true, 'clickable':true, selected: tabs.indexOf(tab) == selected}"
+            id={{tabs.indexOf(tab)}} (click)="changeTab($event)" >
           {{tab.name}}
         </li>
       </ul>
@@ -22,12 +23,19 @@ import { Component, OnInit } from '@angular/core';
       list-style: none;
       border-left: 1px solid black;
       border-top: 1px solid black;
-      border-radius 7px 7px 0px 0px;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
       width: 65px;
+      background-color: DarkGreen;
+      color: white;
     }
 
     .tab:nth-child(3){
       border-right: 1px solid black;
+    }
+
+    .selected{
+      font-weight: bold;
     }
 
 
@@ -38,6 +46,9 @@ import { Component, OnInit } from '@angular/core';
       display:flex;
       justify-content: center;
       align-items: center;
+      background-image: url('http://www.planwallpaper.com/static/images/1757527.jpg');
+      background-size:cover;
+      color: white;
     }
 
     .tabs{
