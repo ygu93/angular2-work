@@ -1,0 +1,24 @@
+h1 {
+  color: rgba(175, 47, 47, 0.15);
+  font-size: 100px;
+  font-family: Helvetica;
+  margin: 0px;
+}
+
+header {
+  text-align: center;
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+  margin: 0;
+  padding: 0;
+}
+
+.new-todo{
+  width: 500px;
+  height: 50px;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 24px;
+}
