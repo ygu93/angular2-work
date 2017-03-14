@@ -22,3 +22,42 @@ body {
   font-family: Helvetica;
   font-size: 24px;
 }
+
+.todo-list{
+  text-align: left;
+  list-style: none;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.view{
+  width: 500px;
+  height: 50px;
+  text-align: left;
+  font-family: Helvetica;
+  font-size: 24px;
+  margin: 0px auto;
+  border: 2px solid #D3D3D3;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.completed{
+  text-decoration: line-through;
+  color: #D3D3D3;
+}
+
+.footer{
+  width: 500px;
+  height: 35px;
+  text-align: left;
+  font-family: Helvetica;
+  font-size: 14px;
+  margin: 0px auto;
+  border: 2px solid #D3D3D3;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  color: gray;
+}
