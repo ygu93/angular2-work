@@ -61,3 +61,31 @@ body {
   align-items: center;
   color: gray;
 }
+
+.view label{
+  margin-left: 20px;
+}
+
+.toggle{
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.destroy{
+  display: none;
+  cursor: pointer;
+  margin-left: 340px;
+  outline: none;
+  background-color: transparent;
+  color: red;
+  font-weight: bold;
+  border: none;
+}
+
+.view:hover .destroy{
+  display: block;
+}
+
+.footer span{
+  margin-left: 5px;
+}
