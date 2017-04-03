@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   <h1>
     {{title}}
   </h1>
-  <app-my-heroes></app-my-heroes>
+  <a routerLink="/heroes">Heroes</a>
+  <router-outlet></router-outlet>
   `
 })
 export class AppComponent {
